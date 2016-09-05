@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--<meta name="viewport" content="width=320,user-scalable=no" />-->
+	 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="css/common.css">
+	<link href="css/index.css" rel="stylesheet" />
+	<title>Demo</title>
+</head>
+<body>
+	<!-- 起始页 -->
+	<div class="page pageShow" id="welcome">
+		<div class="tree">
+	    	<img src="img/tree.jpg" />
+	        <div class="welcome2">
+	        	<img src="img/title.png" />
+	            <span class="shake"></span>
+	        </div>
+	        <span class="cloud"></span>
+	        <span class="cloud"></span>
+	        <span class="cloud"></span>
+	    </div>
+	</div>
+	<!-- 首页内容 -->
+	<div class="page pageShow" id="index">
+		<!-- 轮播图部分 -->
+		<div class="scrollWrap">
+			<div id="tabPic">
+				<ul id="picList">
+					<li><img src="img/home.jpeg" /></li>
+					<li><img src="img/home.jpeg" /></li>
+					<li><img src="img/home.jpeg" /></li>
+					<li><img src="img/home.jpeg" /></li>
+					<li><img src="img/home.jpeg" /></li>
+				</ul>
+				<div class="picMask">
+					<p>鲁山县风景区</p>
+					<nav>
+						<a href="javascript:;" class="active"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</nav>
+				</div>
+			</div>
+			<!-- 圆红色Demo -->
+			<a href="javascript:;" class="newsBtn">Demo</a>
+			<!-- 给景区评分 -->
+			<div id="score">
+				<h2>给景区评分</h2>
+				<ul class="scoreList">
+					<li>
+						<span>综合印象</span>
+						<nav>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+						</nav>
+						<input type="hidden" value="0" />
+					</li>
+					<li>
+						<span>服务指数</span>
+						<nav>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+						</nav>
+						<input type="hidden" value="0" />
+					</li>
+					<li>
+						<span>消费指数</span>
+						<nav>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+							<a href="javascript:;"></a>
+						</nav>
+						<input type="hidden" value="0" />
+					</li>
+				</ul>
+			</div>
+			<!-- 给景区添加标签 -->
+			<div class="tags" id="indexTag">
+				<h2>给景区添加标签</h2>
+				<label>
+					<input type="radio" name="tags" value="景色赞" />
+					<span>景色赞</span>
+				</label>
+				<label>
+					<input type="radio" name="tags" value="看人海" />
+					<span>看人海</span>
+				</label>
+				<label>
+					<input type="radio" name="tags" value="挤爆了" />
+					<span>挤爆了</span>
+				</label>
+				<label>
+					<input type="radio" name="tags" value="景色赞" />
+					<span>景色赞</span>
+				</label>
+				<label>
+					<input type="radio" name="tags" value="看人海" />
+					<span>看人海</span>
+				</label>
+				<label>
+					<input type="radio" name="tags" value="挤爆了" />
+					<span>挤爆了</span>
+				</label>
+			</div>
+			<!-- 底部提示信息 -->
+			<p class="info"></p>
+			<!-- 底部提交按钮 -->
+			<input type="button" value="提交" class="btn submit" />
+		</div>
+	</div>
+	<!-- 遮罩 -->
+	<div class="page" id="mask"></div>
+	<!-- 给视频添加标签(js操作显示) -->
+	<div class="page" id="form">
+		<div class="tags" id="formTag">
+	        <h2>给视频添加标签</h2>
+	        <label>
+	            <input type="radio" name="tags2" value="景色赞" />
+	            <span>景色赞</span>
+	        </label>
+	        <label>
+	            <input type="radio" name="tags2" value="看人海" />
+	            <span>看人海</span>
+	        </label>
+	        <label>
+	            <input type="radio" name="tags2" value="挤爆了" />
+	            <span>挤爆了</span>
+	        </label>
+	        <label>
+	            <input type="radio" name="tags2" value="景色赞" />
+	            <span>景色赞</span>
+	        </label>
+	        <label>
+	            <input type="radio" name="tags2" value="看人海" />
+	            <span>看人海</span>
+	        </label>
+	        <label>
+	            <input type="radio" name="tags2" value="挤爆了" />
+	            <span>挤爆了</span>
+	        </label>
+	    </div>
+	    <textarea class="formText" placeholder="（选填：说点什么呢~~）" rows="5"></textarea>
+	    <input type="tel" class="formText" placeholder="（选填：说点什么呢~~）"/>
+	    <input type="button" value="上传" class="btn" />
+	</div>
+	<!-- 上传文件(视频/照片) -->
+	<div class="page" id="news">
+		<img src="img/news.png" />
+	    <h2>请上传(文件)......</h2>
+	    <div class="file">
+	    	<label>
+	        	<input type="file" />
+	            <span>导入视频</span>
+	        </label>
+	        <label>
+	        	<input type="file" />
+	            <span>上传照片</span>
+	        </label>
+	    </div>
+	    <p class="info"></p>
+	</div>
+	<!-- 结束显示页 -->
+	<div class="page" id="over">
+		<div class="tree">
+			<img src="img/tree.jpg" />
+			<div class="welcome2">
+				<img src="img/tranks2.png" />
+			</div>
+			<span class="cloud"></span>
+			<span class="cloud"></span>
+			<span class="cloud"></span>
+		</div>
+		<input type="button" value="重新评价" class="btn submit" />
+	</div>
+
+<script src="js/index.js"></script>
+<!-- 计算移动端屏幕的宽高 -->
+<script>
+	document.body.style.height=view().h+"px";
+	document.body.style.width=view().w+"px";
+</script>
+<script>
+	fnLoad();
+</script>	
+</body>
+</html>
